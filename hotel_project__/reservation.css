@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cookie&family=Poppins:wght@600&display=swap');
+
+:root {
+    --bg-text-shadow: 0 2px 4px rgb(13 0 77 / 8%), 0 3px 6px rgb(13 0 77 / 8%), 0 8px 16px rgb(13 0 77 / 8%);
+    --bg-box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.621);
+}
+*::-webkit-scrollbar{
+    width: .4rem;
+}
+*::-webkit-scrollbar-track{
+    background: rgb(6, 6, 44);
+}
+*::-webkit-scrollbar-thumb{
+    background: #0040ff;
+}
+
+
+* {
+    
+ 
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* text-shadow: var(--bg-text-shadow); */
+    
+}
+  
+
+
+#guestdetailpanel{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.558);
+    position: fixed;
+    z-index: 10000;
+}
+
+
+.head{
+    text-align: center;
+    margin-bottom: 40px;
+    
+
+}
+
+
+nav{
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.279);
+    /* background-color: rgb(204 223 244); */
+
+    z-index: 200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    /* box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.386); */
+}
+
+nav ul{
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+    color: black;
+}
+
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    
+}
+ul li{
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+ul li:hover::after{
+    content: "";
+    position: absolute;
+    display: flex;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    /* display: none; */
+    transition: ease 2s;}
+
+
+    
+#guestdetailpanel .guestdetailpanelform{
+    height: 620px;
+    /* width: 1170px; */
+    width: 1520px;
+    background-color: #ccdff4;
+    border-radius: 10px;  
+    /* temp */
+    position: relative;
+    top: 20px;
+    animation: guestinfoform .3s ease;
+}
+a{
+    color: black;
+}
+
+@keyframes guestinfoform{
+    0%{
+        transform: translateY(50px);
+    }
+}
+
+.guestdetailpanelform .head{
+    /* width: 100%; */
+    padding: 0 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* z-index: 10 !important; */
+}
+
+.guestdetailpanelform .head h3{
+    color: #111f49;
+    position: relative;
+    left: 40%;
+    margin-top: 10px;
+    z-index: 10;
+}
+.guestdetailpanelform .head i{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.guestdetailpanelform .middle{
+    width: 100%;
+    height: 500px;
+    margin: 10px 0 0 0;
+    display: flex;
+    padding-top: 200px;
+}
+
+.guestdetailpanelform .middle .guestinfo{
+    padding-top: 0px;
+    width: 100%;
+    background-color: rgba(155, 187, 255, 0.752);
+ margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.guestdetailpanelform .middle .reservationinfo{
+    
+    width: 100%;
+    background-color: rgba(155, 187, 255, 0.752);
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.line{
+    width: 10px;
+    height: 100%
+}
+
+.guestdetailpanelform .footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.middle input,.selectinput{
+    width: 100%;
+    border: none;
+    background-color: #d1d7ff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+
+.datesection{
+    display: flex;
+}
+
+.datesection span{
+    margin: 5px;
+}
+
+/* room book table */
+.roombooktable{
+    position: absolute;
+    color: #0a0d2d;
+    margin-top: 80px;
+    width: 100%;
+    height: 100vh;
+
+    /* padding bottom to add space */
+    padding-bottom: 900px;
+}
+.roombooktable thead{
+    background-color:  #0a0d2d;
+    color: white;
+    text-align: center;
+}
+.roombooktable tbody{
+    text-align: center;
+}
+
+.action a{
+    text-decoration: none;
+}
+
+.action button{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+.guestdetailpanelform {
+    position: relative;
+    min-height: 10vh;
+    /* z-index: 1; */
+    
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Ensures the button spans the full width of the form */
+    text-align: center; /* Centers the content horizontally */
+    padding-bottom: 0px; /* Adjust the distance from the bottom as needed */
+}
+
